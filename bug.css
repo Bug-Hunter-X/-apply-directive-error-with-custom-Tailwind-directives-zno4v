@@ -1,0 +1,16 @@
+This error occurs when using Tailwind's `@apply` directive within a custom directive.  The `@apply` directive expects to be used with utility classes, not other directives or custom CSS rules.
+
+```css
+/* Incorrect usage: */
+@layer components {
+  .my-component {
+    @apply my-custom-directive; /* Error: Invalid @apply usage */
+  }
+}
+
+@layer utilities {
+  @directive my-custom-directive {
+    color: red;
+  }
+}
+```
