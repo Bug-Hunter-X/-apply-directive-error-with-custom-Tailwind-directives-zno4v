@@ -1,0 +1,11 @@
+The correct approach is to directly include the custom styles within your component styles, instead of using `@apply` with a custom directive:
+
+```css
+/* Correct usage: */
+@layer components {
+  .my-component {
+    color: red; /* Directly apply the styles */
+  }
+}
+/* Or remove custom directive completely if not needed */
+```
